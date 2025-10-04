@@ -1,0 +1,299 @@
+═══════════════════════════════════════════════════════════════════
+   📍 QuickServe - HOW TO RUN
+   Complete Step-by-Step Guide
+═══════════════════════════════════════════════════════════════════
+
+✅ STEP 1: XAMPP SETUP
+─────────────────────
+
+1. Open XAMPP Control Panel
+2. Click "Start" button for Apache ✓
+3. Click "Start" button for MySQL ✓
+4. Wait until both show "Running" status (green)
+
+═══════════════════════════════════════════════════════════════════
+
+✅ STEP 2: COPY PROJECT FILES
+─────────────────────────────
+
+1. Copy the entire "NearByMe" folder
+2. Paste it in: C:\xampp\htdocs\
+3. Final path should be: C:\xampp\htdocs\NearByMe\
+
+═══════════════════════════════════════════════════════════════════
+
+✅ STEP 3: SETUP DATABASE
+─────────────────────────
+
+1. Open your web browser (Chrome/Firefox)
+
+2. Go to this URL:
+   http://localhost/NearByMe/database/init-database.php
+
+3. You will see:
+   ✓ Database created successfully
+   ✓ Users table created successfully
+   ✓ Services table created successfully
+   ✓ Bookings table created successfully
+   ✓ Reviews table created successfully
+   ✓ Admin user created successfully
+   ✓ Sample provider created successfully
+   ✓ Sample customer created successfully
+   ✓ Demo services created successfully
+
+4. Demo credentials will be displayed
+
+═══════════════════════════════════════════════════════════════════
+
+✅ STEP 4: ACCESS APPLICATION
+─────────────────────────────
+
+Main Homepage:
+http://localhost/NearByMe/
+
+You should see:
+- Beautiful glassmorphism design
+- Service listings with cards
+- Search bar at top
+- Navigation menu
+
+═══════════════════════════════════════════════════════════════════
+
+✅ STEP 5: LOGIN TO TEST
+────────────────────────
+
+Go to: http://localhost/NearByMe/login.php
+
+Try these demo accounts:
+
+🔐 ADMIN LOGIN:
+   Email: admin@nearbyme.com
+   Password: admin123
+   Access: http://localhost/NearByMe/admin-dashboard.php
+
+👔 PROVIDER LOGIN:
+   Email: john.smith@example.com
+   Password: provider123
+   Access: http://localhost/NearByMe/provider-dashboard.php
+
+👤 CUSTOMER LOGIN:
+   Email: alice@example.com
+   Password: customer123
+   Access: http://localhost/NearByMe/customer-dashboard.php
+
+═══════════════════════════════════════════════════════════════════
+
+✅ ALL PAGES/URLS
+────────────────
+
+Homepage:
+http://localhost/NearByMe/
+
+Authentication:
+http://localhost/NearByMe/login.php
+http://localhost/NearByMe/register.php
+http://localhost/NearByMe/logout.php
+
+Dashboards:
+http://localhost/NearByMe/customer-dashboard.php
+http://localhost/NearByMe/provider-dashboard.php
+http://localhost/NearByMe/admin-dashboard.php
+
+Database Setup:
+http://localhost/NearByMe/database/init-database.php
+
+═══════════════════════════════════════════════════════════════════
+
+✅ WHAT TO TEST
+───────────────
+
+1. HOMEPAGE:
+   - Browse services
+   - Use search functionality
+   - Filter by category
+   - View service details
+
+2. CUSTOMER DASHBOARD:
+   - View statistics
+   - See bookings (if any)
+   - View profile
+
+3. PROVIDER DASHBOARD:
+   - View your services
+   - See booking requests
+   - Check earnings statistics
+
+4. ADMIN DASHBOARD:
+   - View all users
+   - Filter users by role
+   - See all services
+   - View all bookings
+   - Check platform statistics
+
+═══════════════════════════════════════════════════════════════════
+
+✅ COMPLETED FEATURES
+─────────────────────
+
+✓ User Authentication (Login/Register/Logout)
+✓ Role-Based Access Control (Customer/Provider/Admin)
+✓ Homepage with Service Listings
+✓ Advanced Search & Filtering
+✓ Customer Dashboard with Booking Management
+✓ Provider Dashboard with Service Management
+✓ Admin Dashboard with Complete Platform Control
+✓ Beautiful Glassmorphism UI Design
+✓ Fully Responsive Design
+✓ Secure Password Hashing
+✓ SQL Injection Prevention
+✓ XSS Protection
+
+═══════════════════════════════════════════════════════════════════
+
+❗ TROUBLESHOOTING
+─────────────────
+
+Problem: "This site can't be reached"
+Solution: 
+- Check if Apache is running in XAMPP
+- Verify URL: http://localhost/NearByMe/ (with capital N and M)
+
+Problem: "Connection failed"
+Solution:
+- Check if MySQL is running in XAMPP
+- Go to XAMPP Control Panel and start MySQL
+
+Problem: "Table doesn't exist"
+Solution:
+- Run database setup: http://localhost/NearByMe/database/init-database.php
+- Refresh the page
+
+Problem: "Page not found / 404 error"
+Solution:
+- Verify path is correct: C:\xampp\htdocs\NearByMe\
+- Check folder name spelling (capital N and M)
+
+Problem: "CSS not loading / ugly page"
+Solution:
+- Clear browser cache (Ctrl + Shift + Delete)
+- Hard refresh page (Ctrl + F5)
+- Check if style.css exists in assets/css/
+
+═══════════════════════════════════════════════════════════════════
+
+✅ PROJECT FILES
+───────────────
+
+Main Files:
+- index.php (Homepage)
+- login.php (Login page)
+- register.php (Registration)
+- logout.php (Logout handler)
+- customer-dashboard.php (Customer panel)
+- provider-dashboard.php (Provider panel)
+- admin-dashboard.php (Admin panel)
+
+Config Files:
+- config/database.php (Database connection)
+- config/auth.php (Authentication handler)
+
+Database:
+- database/init-database.php (Setup script)
+
+Styling:
+- assets/css/style.css (Glassmorphism design)
+
+Documentation:
+- README.md (Complete documentation)
+- QUICKSTART.md (5-minute setup guide)
+- PROJECT_SUMMARY.txt (Project overview)
+- HOW_TO_RUN.txt (This file)
+
+═══════════════════════════════════════════════════════════════════
+
+✅ DATABASE INFO
+───────────────
+
+Database Name: nearbyme_db
+Host: localhost
+Username: root
+Password: (empty)
+
+Tables:
+1. users - All user accounts
+2. services - Service listings
+3. bookings - Booking records
+4. reviews - Ratings and reviews
+
+═══════════════════════════════════════════════════════════════════
+
+✅ TECHNOLOGY STACK
+──────────────────
+
+Backend: PHP 7.4+
+Database: MySQL 5.7+
+Server: Apache (XAMPP)
+Frontend: HTML5, CSS3, JavaScript
+Design: Glassmorphism UI
+Architecture: MVC Pattern
+
+═══════════════════════════════════════════════════════════════════
+
+🎉 SUCCESS CHECKLIST
+───────────────────
+
+Before you start testing, verify:
+
+☑ XAMPP Apache is running (green in control panel)
+☑ XAMPP MySQL is running (green in control panel)
+☑ NearByMe folder is in C:\xampp\htdocs\
+☑ Database setup script has been run
+☑ Homepage loads: http://localhost/NearByMe/
+☑ Services are visible on homepage
+☑ Login page works: http://localhost/NearByMe/login.php
+☑ Can login with demo credentials
+☑ Dashboard loads based on user role
+
+═══════════════════════════════════════════════════════════════════
+
+📞 NEED HELP?
+────────────
+
+1. Read README.md for detailed documentation
+2. Check QUICKSTART.md for quick setup
+3. Review PROJECT_SUMMARY.txt for overview
+4. Verify all steps in troubleshooting section
+
+═══════════════════════════════════════════════════════════════════
+
+🎊 CONGRATULATIONS!
+──────────────────
+
+Your "QuickServe" service marketplace platform is now ready!
+
+The application is:
+✓ Fully functional
+✓ Modern & beautiful design
+✓ Secure & protected
+✓ Ready to use
+
+Start exploring by going to:
+http://localhost/NearByMe/
+
+Login with any demo account and explore all features!
+
+Happy Testing! 🚀
+
+═══════════════════════════════════════════════════════════════════
+
+Development Team:
+- Ajeet Kumar (2305101010016)
+- Abhishek Patel (2305101010007)
+- Kundan Patil (2305101010187)
+
+Guide: Prof. PARMAR PRATIK
+Institution: Parul Institute of Computer Applications
+
+═══════════════════════════════════════════════════════════════════
+End of Guide
+═══════════════════════════════════════════════════════════════════
