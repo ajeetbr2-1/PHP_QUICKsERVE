@@ -1,34 +1,10 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "htdocs/QuickServe/**/*.php",
-      "use": "@vercel/php"
-    },
-    {
-      "src": "NearByMe/**/*.php",
-      "use": "@vercel/php"
-    }
-  ],
+  "outputDirectory": "htdocs/QuickServe",
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/htdocs/QuickServe/api/$1"
-    },
-    {
-      "src": "/nearbyme/(.*)",
-      "dest": "/NearByMe/$1"
-    },
-    {
       "src": "/(.*)",
-      "dest": "/htdocs/QuickServe/$1"
+      "dest": "/$1"
     }
-  ],
-  "env": {
-    "DB_HOST": "@db_host",
-    "DB_NAME": "@db_name", 
-    "DB_USER": "@db_user",
-    "DB_PASS": "@db_pass",
-    "DB_PORT": "@db_port"
-  }
+  ]
 }
