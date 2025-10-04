@@ -1,0 +1,16 @@
+{
+  "name": "php-quickserve",
+  "version": "1.0.0",
+  "description": "PHP QuickServe - Service Marketplace Platform",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'No build step required for PHP'",
+    "dev": "php -S localhost:3000 -t htdocs/QuickServe"
+  },
+  "keywords": ["php", "marketplace", "services", "vercel"],
+  "author": "Ajeet Kumar",
+  "license": "MIT",
+  "engines": {
+    "php": ">=7.4"
+  }
+}
