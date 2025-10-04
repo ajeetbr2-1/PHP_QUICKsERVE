@@ -92,22 +92,3 @@ CREATE INDEX IF NOT EXISTS idx_bookings_customer_id ON bookings(customer_id);
 CREATE INDEX IF NOT EXISTS idx_bookings_service_id ON bookings(service_id);
 CREATE INDEX IF NOT EXISTS idx_bookings_provider_id ON bookings(provider_id);
 CREATE INDEX IF NOT EXISTS idx_reviews_booking_id ON reviews(booking_id);
-
--- Enable Row Level Security (RLS) for better security
-ALTER TABLE users ENABLE ROW LEVEL SECURITY;
-ALTER TABLE services ENABLE ROW LEVEL SECURITY;
-ALTER TABLE bookings ENABLE ROW LEVEL SECURITY;
-ALTER TABLE reviews ENABLE ROW LEVEL SECURITY;
-
--- Create policies for RLS (basic policies - you can customize these)
-CREATE POLICY "Users can view their own data" ON users FOR SELECT USING (auth.uid()::text = id::text);
-CREATE POLICY "Users can update their own data" ON users FOR UPDATE USING (auth.uid()::text = id::text);
-CREATE POLICY "Anyone can view active services" ON services FOR SELECT USING (is_active = true);
-CREATE POLICY "Providers can manage their own services" ON services FOR ALL USING (auth.uid()::text = provider_id::text);
-CREATE POLICY "Users can view their own bookings" ON bookings FOR SELECT USING (auth.uid()::text = customer_id::text OR auth.uid()::text = provider_id::text);
-CREATE POLICY "Users can create bookings" ON bookings FOR INSERT WITH CHECK (true);
-CREATE POLICY "Anyone can view reviews" ON reviews FOR SELECT USING (true);
-CREATE POLICY "Users can create reviews" ON reviews FOR INSERT WITH CHECK (true);
-
--- Note: The password hash above is for 'password123' - change this in production!
--- To generate new password hashes, use: password_hash('your_password', PASSWORD_DEFAULT)
